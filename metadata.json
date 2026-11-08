@@ -1,0 +1,6 @@
+{
+  "name": "Ramayana: The Divine Epic Experience",
+  "description": "An immersive modern Ramayana web experience with glowing VFX, character life lessons, interactive storytelling, soothing meditative soundscapes, warm wishes from Hemant Shelkar, and personalized blessings from Lord Rama.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
