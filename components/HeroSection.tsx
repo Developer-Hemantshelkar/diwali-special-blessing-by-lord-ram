@@ -103,7 +103,7 @@ export default function HeroSection({
             onClick={onScrollToBlessing}
             className="w-full sm:w-auto min-h-[48px] inline-flex items-center justify-center gap-2.5 rounded-xl bg-gradient-to-r from-amber-500 via-amber-400 to-amber-600 px-5 sm:px-6 py-3.5 text-xs sm:text-sm font-bold font-serif text-stone-950 shadow-xl shadow-amber-500/25 hover:from-amber-400 hover:to-amber-500 active:scale-95 transition-all whitespace-nowrap cursor-pointer"
           >
-            <span>Receive Lord Rama&apos;s Blessing</span>
+            <span>श्री राम का पावन आशीर्वाद प्राप्त करें</span>
             <ArrowRight className="h-4 w-4" />
           </button>
 

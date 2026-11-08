@@ -7,7 +7,6 @@ export async function POST(req: NextRequest) {
 
     const apiKey = process.env.GEMINI_API_KEY;
     if (!apiKey) {
-      // Fallback response handled gracefully
       return NextResponse.json({
         isAiGenerated: false,
         message: "Using sacred scriptural blessing archive."
@@ -16,18 +15,27 @@ export async function POST(req: NextRequest) {
 
     const ai = new GoogleGenAI({ apiKey });
 
-    const prompt = `You are providing a sacred, uplifting, and poetic blessing from Maryada Purushottama Lord Rama to a seeker named "${name || "Devotee"}".
-The seeker's life focus / prayer is: "${intention || "Inner Peace and Dharma"}".
-Additional thought: "${customRequest || "Blessings for guidance and courage"}".
+    const seekerName = name?.trim() || "प्रिय साधक";
 
-Provide the blessing in the following JSON format:
+    const prompt = `You are Maryada Purushottama Lord Rama bestowing a personalized, sacred, and deeply uplifting divine blessing upon a seeker named "${seekerName}".
+The seeker's life prayer / focus is: "${intention || "धर्म एवं आत्मिक शांति"}".
+Additional personal reflection: "${customRequest || "मार्गदर्शन एवं संबल की कामना"}".
+
+LANGUAGE REQUIREMENTS (STRICT):
+1. 'sanskritShloka': Must be ONLY in sacred Sanskrit with proper Devanagari script.
+2. 'shlokaMeaning': Must be in pure, dignified HINDI (श्लोक का भावार्थ केवल हिंदी में).
+3. 'personalizedBlessing': Must be in beautiful, compassionate, noble HINDI speaking directly to "${seekerName}" in the gentle, serene, and majestic voice of Lord Rama (प्रभु श्री राम का व्यक्तिगत आशीर्वचन शुद्ध एवं आत्मीय हिंदी में). Do NOT use English in the blessing.
+4. 'virtueToEmbody': Must be in HINDI (धारण करने योग्य सद्गुण).
+5. 'sacredAffirmation': Must be in HINDI (दैनिक ध्यान संकल्प सूत्र).
+
+Format as JSON:
 {
-  "sanskritShloka": "A sacred authentic Valmiki Ramayana or Vedic Sanskrit shloka with Devanagari script",
-  "transliteration": "IAST or readable English transliteration of the shloka",
-  "shlokaMeaning": "Precise English meaning of the Sanskrit shloka",
-  "personalizedBlessing": "A deeply compassionate, profound 3-4 sentence message directly addressing ${name || "dear seeker"}, in the calm, noble, and benevolent tone of Lord Rama, blessing them with clarity, righteousness, and courage in their chosen path.",
-  "virtueToEmbody": "A specific noble virtue from the Ramayana (e.g., Satya, Dhairya, Nishkama Seva, Abhaya)",
-  "sacredAffirmation": "A short, memorable 1-line affirmation for their daily meditation."
+  "sanskritShloka": "संस्कृत श्लोक (देवनागरी लिपि में)",
+  "transliteration": "IAST or readable transliteration",
+  "shlokaMeaning": "श्लोक का पावन हिंदी अर्थ एवं भावार्थ",
+  "personalizedBlessing": "हे ${seekerName}, तुम्हारे अंतःकरण में सत्य, धैर्य और धर्म का प्रकाश सदैव प्रज्वलित रहे... (3-4 sentences in profound, gentle, benevolent Hindi)",
+  "virtueToEmbody": "सद्गुण (जैसे: सत्य एवं धैर्य, अभय, निष्काम सेवा)",
+  "sacredAffirmation": "एक पंक्ति का पावन ध्यान संकल्प (हिंदी में)"
 }
 
 Return ONLY valid JSON without markdown tags.`;

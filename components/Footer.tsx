@@ -66,7 +66,7 @@ export default function Footer() {
               </span>
               <div className="flex flex-wrap items-center gap-2 sm:gap-2.5">
                 <a
-                  href="https://www.linkedin.com/in/hemant-shelkar"
+                  href="https://www.linkedin.com/in/hemant-shelkar-a33447b228"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex h-11 w-11 items-center justify-center rounded-xl bg-stone-900 border border-stone-800 text-stone-300 hover:text-amber-300 hover:border-amber-400 hover:bg-stone-800 active:scale-95 transition-all shadow-sm cursor-pointer"
@@ -76,7 +76,7 @@ export default function Footer() {
                 </a>
 
                 <a
-                  href="https://github.com/hemantshelkar"
+                  href="https://github.com/Developer-Hemantshelkar"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex h-11 w-11 items-center justify-center rounded-xl bg-stone-900 border border-stone-800 text-stone-300 hover:text-amber-300 hover:border-amber-400 hover:bg-stone-800 active:scale-95 transition-all shadow-sm cursor-pointer"

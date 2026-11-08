@@ -13,75 +13,75 @@ export interface BlessingIntent {
 export const BLESSING_INTENTIONS: BlessingIntent[] = [
   {
     id: "dharma-clarity",
-    label: "Dharma & Ethical Clarity",
-    tagline: "Guidance for righteous decisions and unclouded moral judgment",
+    label: "धर्म एवं नैतिक स्पष्टता",
+    tagline: "सत्य मार्ग पर अडिग रहने और कर्तव्य-पालन की दिव्य प्रेरणा",
     sanskritShloka: "धर्मो रक्षति रक्षितः ।\nतस्माद् धर्मो न हन्तव्यो मानो धर्मो हतोऽवधीत् ॥",
     transliteration: "Dharmo rakṣati rakṣitaḥ | Tasmād dharmo na hantavyo mā no dharmo hato'vadhīt ||",
-    shlokaMeaning: "Dharma protects those who uphold it. Therefore, truth and righteousness must never be abandoned, for preserved Dharma remains our greatest shield.",
+    shlokaMeaning: "जो मनुष्य धर्म की रक्षा करता है, धर्म स्वयं ढाल बनकर उसकी रक्षा करता है। अतः धर्म का कभी त्याग नहीं करना चाहिए, क्योंकि नष्ट किया हुआ धर्म स्वयं नाश का कारण बनता है।",
     blessingTemplate: (name: string) =>
-      `May you, dear ${name}, walk always upon the path of unclouded truth. When winds of uncertainty howl around you, may your inner compass point firmly toward righteousness without fear or hesitation. Know that every quiet choice for honesty weaves an armor around your soul that no hardship can penetrate.`,
-    virtueToEmbody: "Satya & Viveka (Truth & Moral Discernment)",
-    sacredAffirmation: "I stand unshaken in righteousness; truth is my eternal shield."
+      `हे प्रिय ${name}, तुम्हारे जीवन की प्रत्येक डगर सत्य और धर्म के पावन प्रकाश से आलोकित रहे। जब भी परिस्थितियां तुम्हें विचलित करने का प्रयास करें, तुम्हारा अंतःकरण बिना किसी संकोच के सत्य के साथ खड़ा रहे। स्मरण रखो, ईमानदारी और निष्ठा से लिया गया एक छोटा सा निर्णय भी आत्मा को वह दिव्य तेज प्रदान करता है जिसे संसार की कोई विपत्ति पराजित नहीं कर सकती। मेरा स्नेहमय आशीर्वाद सदैव तुम्हारे साथ है।`,
+    virtueToEmbody: "सत्य एवं विवेक (नैतिक स्पष्टता)",
+    sacredAffirmation: "धर्म ही मेरा संबल है, सत्य ही मेरी विजय है।"
   },
   {
     id: "courage-obstacles",
-    label: "Courage & Overcoming Adversity",
-    tagline: "Strength to cross turbulent oceans of grief and self-doubt",
+    label: "संकट-हरण एवं अदम्य साहस",
+    tagline: "कठिनाइयों के गहरे सागर को पार करने का अटूट आत्मबल",
     sanskritShloka: "लोकाभिरामं रणरङ्गधीरं राजीवनेत्रं रघुवंशनाथम् ।\nकारुण्यरूपं करुणाकरं तं श्रीरामचन्द्रं शरणं प्रपद्ये ॥",
     transliteration: "Lokābhirāmaṁ raṇaraṅgadhīraṁ rājīvanetraṁ raghuvaṁśanātham | Kāruṇyarūpaṁ karuṇākaraṁ taṁ śrīrāmacandraṁ śaraṇaṁ prapadye ||",
-    shlokaMeaning: "The joy of all worlds, intrepid and fearless on the battlefield of life, lotus-eyed Lord of the Raghu lineage, personification of boundless mercy—to Sri Rama I offer my surrender.",
+    shlokaMeaning: "समस्त लोकों में प्रिय, जीवन-संग्राम में परम धैर्यवान, कमल-नयन, रघुकुल के स्वामी और करुणा के साक्षात सागर मर्यादा पुरुषोत्तम श्री रामचन्द्र जी की मैं शरण लेता हूँ।",
     blessingTemplate: (name: string) =>
-      `May your heart, dear ${name}, be imbued with the intrepid courage of the Kodanda bow. Let no mountain intimidate you and no raging sea deter your righteous stride. Remember that just as the ocean yielded before faith and devotion, so shall every trial before you become a stepping stone of glory.`,
-    virtueToEmbody: "Dhairya & Abhaya (Steadfast Fortitude & Fearlessness)",
-    sacredAffirmation: "Within my spirit lies divine courage; no obstacle is insurmountable."
+      `हे प्रिय ${name}, तुम्हारे हृदय में कोदण्ड धनुष जैसा अडिग और तेजस्वी साहस जाग्रत हो। जीवन के किसी भी तूफान या कठिन परीक्षा से भयभीत मत होना। जैसे अगाध समुद्र ने भी भक्ति और विश्वास के सम्मुख मार्ग दे दिया था, वैसे ही तुम्हारी हर बाधा तुम्हारे उत्थान की सीढ़ी बन जाएगी। निर्भय होकर आगे बढ़ो, विजय निश्चित है।`,
+    virtueToEmbody: "धैर्य एवं अभय (अटल आत्मबल)",
+    sacredAffirmation: "मेरे हृदय में ईश्वरीय साहस है, कोई भी संकट मुझे रोक नहीं सकता।"
   },
   {
     id: "inner-peace",
-    label: "Peace, Serenity & Harmony",
-    tagline: "Cultivating calmness amidst turbulent modern distractions",
+    label: "आंतरिक शांति एवं समत्व",
+    tagline: "संसार की भागदौड़ में भी निर्मल और शांत चित्त बनाए रखना",
     sanskritShloka: "शान्ताकारं भुजगशयनं पद्मनाभं सुरेशं\nविश्वाधारं गगनसदृशं मेघवर्णं शुभाङ्गम् ।\nलक्ष्मीकान्तं कमलनयनं योगिभिर्ध्यानगम्यं\nवन्दे विष्णुं भवभयहरं सर्वलोकैकनाथम् ॥",
     transliteration: "Śāntākāraṁ bhujagaśayanaṁ padmanābhaṁ sureśaṁ viśvādhāraṁ gaganasadṛśaṁ meghavarṇaṁ śubhāṅgam | Lakṣmīkāntaṁ kamalanayanaṁ yogibhirdhyānagamyaṁ vande viṣṇuṁ bhavabhayaharaṁ sarvalokaikanātham ||",
-    shlokaMeaning: "I bow before the Lord of supreme peace, foundation of the universe, boundless as the skies, whose serene presence dispels all worldly fears and calms every turbulent thought.",
+    shlokaMeaning: "जिनका स्वरूप परम शांत है, जो संपूर्ण ब्रह्मांड के आधार हैं, आकाश के समान अनंत और निर्मल हैं, ऐसे संसार के समस्त भयों को हरने वाले परमेश्वर को मैं नमन करता हूँ।",
     blessingTemplate: (name: string) =>
-      `May the tranquil waters of the sacred Sarayu river flow through your thoughts, dear ${name}. When the world is frantic with noise and hurry, may you dwell in quiet dignity and gentle poise. Let peace not be a place you seek, but the sanctuary you carry within your own lotus heart.`,
-    virtueToEmbody: "Shanti & Samatva (Equanimity & Inner Stillness)",
-    sacredAffirmation: "I rest in serene stillness; my peace is untouched by worldly turbulence."
+      `हे प्रिय ${name}, तुम्हारे मन में पवित्र सरयू नदी के शांत जल जैसी निर्मलता और गंभीरता प्रवाहित हो। संसार चाहे कितना भी कोलाहलपूर्ण क्यों न हो, तुम्हारा चित्त अपने भीतर के शांति-धाम में स्थिर रहे। शांति बाहर खोजने की वस्तु नहीं, यह तुम्हारे ही अंतर्मन में बसी वह दिव्य ज्योति है जो प्रेम और समभाव से प्रज्वलित होती है।`,
+    virtueToEmbody: "शांति एवं समभाव (सदा प्रसन्न मन)",
+    sacredAffirmation: "मेरा मन शांत, स्थिर और ईश्वर के पावन प्रेम में लीन है।"
   },
   {
     id: "career-success",
-    label: "Purpose, Work & Academic Growth",
-    tagline: "Dedicating your intellect and hard work for noble achievement",
+    label: "कर्म-सिद्धि एवं विद्या-उन्नति",
+    tagline: "विद्या, ज्ञान और कर्मक्षेत्र में निष्ठावान परिश्रम की सिद्धि",
     sanskritShloka: "कर्मण्येवाधिकारस्ते मा फलेषु कदाचन ।\nमा कर्मफलहेतुर्भूर्मा ते सङ्गोऽस्त्वकर्मणि ॥",
     transliteration: "Karmaṇyevādhikāraste mā phaleṣu kadācana | Mā karmaphalaheturbhūrmā te saṅgo'stvakarmaṇi ||",
-    shlokaMeaning: "Your right is to noble, diligent action alone, never to its fruit. Never let the anxious attachment to results derail your excellence, nor let inaction entice your soul.",
+    shlokaMeaning: "तुम्हारा अधिकार केवल निष्ठापूर्वक कर्म करने में है, फल की चिंता में नहीं। कर्मफल के प्रति आसक्त होकर व्यर्थ भयभीत मत होओ, और न ही कर्म त्यागने में तुम्हारी रुचि हो।",
     blessingTemplate: (name: string) =>
-      `May your hands craft greatness and your intellect be razor-sharp, dear ${name}. Walk into your study and workplace with the steadfast dedication of Bharata and the focused mastery of Lakshmana. Give your whole heart to every task, and the fruits of honor and accomplishment shall naturally bow at your feet.`,
-    virtueToEmbody: "Karmayoga & Nishtha (Dedicated Action & Excellence)",
-    sacredAffirmation: "I dedicate my actions with excellence; success flows through righteous effort."
+      `हे प्रिय ${name}, तुम्हारी बुद्धि प्रखर हो और तुम्हारे हाथों से सदा श्रेष्ठ, लोकमंगलकारी कर्मों का सृजन हो। अपने अध्ययन और कार्यक्षेत्र में भरत जैसी निस्वार्थ निष्ठा और लक्ष्मण जैसा लक्ष्य-केन्द्रित समर्पण रखो। जब तुम संपूर्ण निष्ठा से कर्म करोगे, तब सफलता और सम्मान स्वतः तुम्हारे चरणों में नतमस्तक होंगे।`,
+    virtueToEmbody: "कर्मयोग एवं एकाग्रता (सर्वोत्कृष्ट प्रयास)",
+    sacredAffirmation: "मैं अपने कर्म को पूजा मानकर समर्पित भाव से पूर्ण करता हूँ।"
   },
   {
     id: "family-wellbeing",
-    label: "Family Wellbeing & Harmony",
-    tagline: "Deepening bonds of love, respect, and mutual protection",
+    label: "पारिवारिक सुख, स्वास्थ्य एवं मंगल",
+    tagline: "पारस्परिक प्रेम, सम्मान और आरोग्य का कल्याणकारी आशीर्वाद",
     sanskritShloka: "सर्वे भवन्तु सुखिनः सर्वे सन्तु निरामयाः ।\nसर्वे भद्राणि पश्यन्तु मा कश्चिद् दुःखभाग्भवेत् ॥",
     transliteration: "Sarve bhavantu sukhinaḥ sarve santu nirāmayāḥ | Sarve bhadrāṇi paśyantu mā kaścid duḥkhabhāgbhavet ||",
-    shlokaMeaning: "May all beings everywhere be joyful and blessed; may all be free from illness and distress; may all behold goodness in each other, and may none suffer misery.",
+    shlokaMeaning: "समस्त प्राणी सुखी हों, सभी निरोगी और स्वस्थ हों, सब एक-दूसरे का कल्याण देखें और किसी को भी लेशमात्र भी दुःख का भागी न बनना पड़े।",
     blessingTemplate: (name: string) =>
-      `May the divine grace that preserved the sacred household of Ayodhya shelter your home, dear ${name}. May gentle words, unconditional forgiveness, and mutual reverence blossom between your family and loved ones. May your hearth be a haven of warmth and protective grace.`,
-    virtueToEmbody: "Sneha & Kshama (Compassionate Love & Forgiveness)",
-    sacredAffirmation: "My home is protected by love; our bonds are blessed with divine harmony."
+      `हे प्रिय ${name}, अयोध्या के पावन राजमहल को जोड़ने वाली मर्यादा, स्नेह और परस्पर त्याग की भावना तुम्हारे घर-परिवार में सदा वास करे। तुम्हारे स्वजनों के मध्य मधुर वाणी, आदर और क्षमा का वातावरण फले-फूले। तुम्हारा गृह सदा आरोग्य, मंगल और सुख-समृद्धि से परिपूर्ण रहे।`,
+    virtueToEmbody: "स्नेह एवं क्षमा (पारिवारिक सौहार्द)",
+    sacredAffirmation: "मेरा परिवार प्रेम, परस्पर आदर और प्रभु कृपा से सुरक्षित है।"
   },
   {
     id: "devotion-humility",
-    label: "Spiritual Wisdom & Devotion",
-    tagline: "Ego-less devotion and supreme humility like Lord Hanuman",
+    label: "निष्काम भक्ति, विनम्रता एवं ज्ञान",
+    tagline: "अहंकार-रहित सेवा और पवनपुत्र हनुमान जैसा अगाध समर्पण",
     sanskritShloka: "श्रीरामचन्द्र चरणौ मनसा स्मरामि\nश्रीरामचन्द्र चरणौ वचसा गृणामि ।\nश्रीरामचन्द्र चरणौ शिरसा नमामि\nश्रीरामचन्द्र चरणौ शरणं प्रपद्ये ॥",
     transliteration: "Śrīrāmacandra caraṇau manasā smarāmi śrīrāmacandra caraṇau vacasā gṛṇāmi | Śrīrāmacandra caraṇau śirasā namāmi śrīrāmacandra caraṇau śaraṇaṁ prapadye ||",
-    shlokaMeaning: "In my mind I remember the sacred feet of Sri Rama; with my speech I praise them; with bowed head I pay homage; in his protective grace I take complete refuge.",
+    shlokaMeaning: "मैं मन से प्रभु श्री रामचंद्र जी के पावन चरणों का स्मरण करता हूँ, वाणी से उनका गुणगान करता हूँ, मस्तक झुकाकर उन्हें प्रणाम करता हूँ और उनकी ही शरण ग्रहण करता हूँ।",
     blessingTemplate: (name: string) =>
-      `May you cultivate the glorious heart of Hanuman, dear ${name}—where infinite capability is held with supreme modesty. Whenever pride seeks to whisper praise in your ear, remember that the ocean was crossed through devotion, not arrogance. May wisdom shine through your humility.`,
-    virtueToEmbody: "Vinaya & Bhakti (Noble Modesty & Devotion)",
-    sacredAffirmation: "I bow in humility; my strength is consecrated to the highest good."
+      `हे प्रिय ${name}, तुम्हारे भीतर महावीर हनुमान जैसा उदार, बलशाली और परम विनम्र हृदय प्रस्फुटित हो। अपार शक्ति और ज्ञान पाकर भी जो अहंकार से मुक्त रहता है, वही सच्चा ज्ञानी है। जब भी अभिमान तुम्हें घेरने का प्रयास करे, स्मरण रखना कि समुद्र को अहंकार ने नहीं, अनन्य भक्ति और सेवा-भाव ने पार किया था। तुम्हारा जीवन सदा पावन रहे।`,
+    virtueToEmbody: "विनय एवं सेवा-भाव (अहंकार से मुक्ति)",
+    sacredAffirmation: "मेरा बल और ज्ञान संसार के परोपकार और सेवा के लिए समर्पित है।"
   }
 ];
 
@@ -89,64 +89,64 @@ export const RAMAYANA_CHAPTERS = [
   {
     kanda: "Bala Kanda",
     sanskrit: "बालकाण्ड",
-    title: "The Celestial Descent & The Bow of Shiva",
-    era: "The Divine Youth",
-    summary: "The incarnation of Lord Rama in Ayodhya to King Dasharatha and Queen Kausalya. Under the guidance of sage Brahmarshi Vishwamitra, young Rama protects sacred yajnas, liberates Ahilya, and effortlessly strings and breaks the mighty Pinaka (Bow of Shiva) at Janakpur, winning the hand of Mata Sita.",
-    coreLesson: "Preparation, humility before teachers, and using one's strength only for the protection of society.",
-    symbolicMilestone: "The breaking of the Shiva Dhanush symbolizes the shattering of cosmic rigidity by divine grace."
+    title: "दिव्य अवतार एवं शिव धनुष भंग",
+    era: "पावन बाल्यकाल एवं युवावस्था",
+    summary: "अयोध्या में राजा दशरथ और माता कौशल्या के गृह में प्रभु श्री राम का प्राकट्य। महर्षि विश्वामित्र के साथ वन गमन, ताड़का वध, सुबाहु उद्धार, अहिल्या उद्धार और जनकपुर में भगवान शिव के पिनाक धनुष को सहज ही तोड़कर माता सीता का वरण।",
+    coreLesson: "गुरु के प्रति अनन्य समर्पण, शक्ति का प्रयोग केवल समाज की रक्षा के लिए करना।",
+    symbolicMilestone: "शिव धनुष का टूटना यह सिखाता है कि अहंकार की कठोरता ईश्वर के प्रेम और सत्य के सामने टिक नहीं सकती।"
   },
   {
     kanda: "Ayodhya Kanda",
     sanskrit: "अयोध्याकाण्ड",
-    title: "The Supreme Renunciation & The Forest Departure",
-    era: "The Trial of Dharma",
-    summary: "On the eve of Rama's coronation, Queen Kaikeyi, swayed by Manthara's malice, demands two boons: Bharata's coronation and Rama's 14-year exile to Dandakaranya. Without a flinch of sorrow, Lord Rama gladly embraces exile to preserve his father's sacred honor, followed by Sita and Lakshmana.",
-    coreLesson: "Promises are sacrosanct. Personal comfort must be surrendered gladly when higher moral duty commands.",
-    symbolicMilestone: "Rama's peaceful smile upon hearing the sentence of banishment represents supreme emotional mastery."
+    title: "परम त्याग एवं वन गमन",
+    era: "धर्म की अग्निपरीक्षा",
+    summary: "श्री राम के राज्याभिषेक की पूर्व संध्या पर मंथरा के बहकावे में आकर कैकेयी द्वारा दो वरदान मांगना—भरत को राज्यासन और श्री राम को चौदह वर्ष का वनवास। पिता के वचन की रक्षा के लिए बिना किसी संताप के श्री राम द्वारा वनवास स्वीकार करना, साथ में माता सीता और लक्ष्मण का प्रस्थान।",
+    coreLesson: "वचन और सत्य की मर्यादा सर्वोपरि है। व्यक्तिगत सुख और सत्ता का त्याग धर्म के लिए सहर्ष करना चाहिए।",
+    symbolicMilestone: "वनवास का समाचार सुनकर श्री राम का शांत और प्रसन्न मुखमंडल उनके परम आत्म-संयम का प्रतीक है।"
   },
   {
     kanda: "Aranya Kanda",
     sanskrit: "अरण्यकाण्ड",
-    title: "The Deep Forest, The Golden Deer & The Abduction",
-    era: "The Crucible of Trials",
-    summary: "Ten years in the Dandaka forest protecting hermits and sages. The illusion of the golden deer (Maricha) distracts Rama and Lakshmana, allowing Ravana to deceitfully abduct Mata Sita in the guise of an ascetic. Jatayu fights valiantly to his death to defend her.",
-    coreLesson: "Illusions of worldly glitter (the golden deer) are designed to lure the mind away from spiritual equilibrium. Beware of glittering deceptions.",
-    symbolicMilestone: "Jatayu's sacrifice proves that duty is about fighting for truth, regardless of the odds of survival."
+    title: "दंडकारण्य वास एवं स्वर्ण मृग की माया",
+    era: "तपोवन का संघर्ष",
+    summary: "दंडक वन में ऋषियों की रक्षा, शूर्पणखा प्रसंग, खर-दूषण वध, मारीच द्वारा कपटपूर्वक स्वर्ण मृग का रूप धारण करना और रावण द्वारा साधु वेश में माता सीता का हरण। वृद्ध गिद्धराज जटायु का सीता जी की रक्षा हेतु प्राणपण से युद्ध।",
+    coreLesson: "भौतिक संसार का झूठा आकर्षण (स्वर्ण मृग) मन को सत्य से भटकाता है। छल और कपट से सदा सावधान रहना चाहिए।",
+    symbolicMilestone: "जटायु का बलिदान यह सिखाता है कि परिणाम चाहे पराजय हो, पर असहाय की रक्षा के लिए लड़ना ही सबसे बड़ा धर्म है।"
   },
   {
     kanda: "Kishkindha Kanda",
     sanskrit: "किष्किन्धाकाण्ड",
-    title: "Alliance of Loyalty & The Boundless Search",
-    era: "The Brotherhood of Vanaras",
-    summary: "Rama meets Sugriva and Hanuman by Lake Pampa. Rama liberates Sugriva from Vali's injustice, crowning Sugriva king. The Vanara army disperses in all directions to locate Sita. Jambavan reminds Hanuman of his dormant cosmic powers at the ocean shore.",
-    coreLesson: "True friends uplift each other in times of distress. Reminding a friend of their dormant potential can change destiny.",
-    symbolicMilestone: "Hanuman awakening to his forgotten divine strength at the ocean's edge shows that self-realization requires encouragement."
+    title: "सच्ची मित्रता एवं वानर संघटन",
+    era: "भ्रातृत्व एवं निष्ठा",
+    summary: "पंपा सरोवर तट पर सुग्रीव और हनुमान जी से भेंट। श्री राम द्वारा बालि का उद्धार और सुग्रीव को किष्किंधा का राज्य। माता सीता की खोज में वानर सेना का प्रस्थान और समुद्र तट पर जाम्बवंत जी द्वारा हनुमान जी को उनकी सुप्त शक्तियों का स्मरण कराना।",
+    coreLesson: "सच्चा मित्र संकट में संबल बनता है। जब योग्य व्यक्ति को उसकी क्षमता का भान कराया जाए, तो असंभव भी संभव हो जाता है।",
+    symbolicMilestone: "हनुमान जी का आत्म-जागरण यह संदेश देता है कि आत्मविश्वास जगाने के लिए सत्संग और मार्गदर्शन आवश्यक है।"
   },
   {
     kanda: "Sundara Kanda",
     sanskrit: "सुन्दरकाण्ड",
-    title: "Hanuman's Heroic Leap & The Solace of Ashok Vatika",
-    era: "The Triumph of Devotion",
-    summary: "Hanuman leaps across the roaring ocean, overcomes Surasa and Lankini, and discovers Mata Sita meditating under the Ashoka tree in Lanka. He presents Rama's signet ring (Mudra), gives her boundless solace, burns golden Lanka in retribution, and leaps back with the jewel Choodamani.",
-    coreLesson: "Nothing in the universe can withstand the combined force of deep intellect, devotion, and fearless purpose.",
-    symbolicMilestone: "The ring of Rama delivered by Hanuman represents the reassurance that God's help always arrives at the darkest hour."
+    title: "हनुमान जी की समुद्र लांघन यात्रा एवं अशोक वाटिका",
+    era: "भक्ति और बुद्धि की विजय",
+    summary: "पवनपुत्र हनुमान जी द्वारा अगाध समुद्र को लांघना, सुरसा और लंकिनी को परास्त कर लंका में प्रवेश। अशोक वाटिका में माता सीता के दर्शन, श्री राम की मुद्रिका भेंट करना, रावण को चेतावनी, लंका दहन और माता सीता की चूड़ामणि लेकर सकुशल लौटना।",
+    coreLesson: "दृढ़ इच्छाशक्ति, प्रखर बुद्धि और निस्वार्थ भक्ति के सम्मुख संसार की कोई भी बाधा टिक नहीं सकती।",
+    symbolicMilestone: "श्री राम की मुद्रिका यह विश्वास दिलाती है कि घोर अंधकार में भी ईश्वर का सहारा अवश्य पहुंचता है।"
   },
   {
     kanda: "Yuddha Kanda",
     sanskrit: "युद्धकाण्ड",
-    title: "The Floating Stone Bridge & The Fall of Darkness",
-    era: "The War for Universal Truth",
-    summary: "The Vanaras construct the extraordinary Ram Setu stone bridge across the ocean with floating stones inscribed with 'Shri Rama'. In an epic confrontation, Kumbhakarna, Meghanada, and Ravana are defeated by Rama and Lakshmana, liberating Sita and restoring the balance of cosmic righteousness.",
-    coreLesson: "Even stones float when inscribed with sacred purpose. Injustice, no matter how mighty or wealthy, carries the seeds of its own doom.",
-    symbolicMilestone: "The Brahmastra released by Rama dispels the illusion of Ravana's invincibility, proving truth alone triumphs (Satyameva Jayate)."
+    title: "राम सेतु निर्माण एवं अधर्म पर धर्म की विजय",
+    era: "महायुद्ध एवं धर्म स्थापना",
+    summary: "श्री राम नाम अंकित पत्थरों से समुद्र पर अलौकिक सेतु का निर्माण। रावण, कुंभकर्ण और मेघनाद के विरुद्ध धर्मयुद्ध। विभीषण का शरणागति, रावण का वध, माता सीता की मुक्ति और धर्म की त्रैलोक्य विजय।",
+    coreLesson: "अधर्म और अहंकार कितना भी शक्तिशाली क्यों न हो, उसका अंत निश्चित है। सत्यमेव जयते।",
+    symbolicMilestone: "पत्थरों का पानी पर तैरना यह सिद्ध करता है कि ईश्वर का नाम और पावन संकल्प भारी से भारी कठिनाई को तैरा देता है।"
   },
   {
     kanda: "Uttara Kanda",
     sanskrit: "उत्तरकाण्ड",
-    title: "Ramrajya & The Eternal Heritage of Dharma",
-    era: "The Golden Era",
-    summary: "The return to Ayodhya aboard Pushpaka Vimana, celebrated as the festival of Deepawali. Lord Rama is crowned king, inaugurating 'Ramrajya'—an ideal society where justice, harmony, prosperity, health, and mutual respect thrive across all beings.",
-    coreLesson: "True governance is founded on selflessness, empathy for the weakest citizen, and harmony between nature and humanity.",
-    symbolicMilestone: "The lighting of Ayodhya's oil lamps (Diyas) represents the eternal triumph of spiritual light over ignorance."
+    title: "रामराज्य की स्थापना एवं शाश्वत विरासत",
+    era: "स्वर्ण युग",
+    summary: "पुष्पक विमान द्वारा अयोध्या आगमन, दीप प्रज्वलन उत्सव (दीपावली), श्री राम का भव्य राज्याभिषेक और आदर्श 'रामराज्य' की स्थापना—जहाँ न्याय, समता, परस्पर प्रेम और प्रकृति का सम्मान सर्वोपरि था।",
+    coreLesson: "आदर्श शासन वही है जहाँ दुर्बल से दुर्बल व्यक्ति भी निर्भय होकर सम्मान के साथ जी सके।",
+    symbolicMilestone: "अयोध्या के दीयों की ज्योति अज्ञान पर आत्म-ज्ञान की शाश्वत विजय का प्रतीक है।"
   }
 ];

@@ -79,8 +79,8 @@ export default function TopBar({
             className="flex items-center justify-center gap-1.5 px-3 sm:px-4 py-2 min-h-[40px] text-xs font-serif font-semibold text-stone-950 bg-gradient-to-r from-amber-400 to-amber-500 rounded-lg hover:from-amber-300 hover:to-amber-400 active:scale-95 transition-all shadow-md shadow-amber-500/20 whitespace-nowrap shrink-0 cursor-pointer"
           >
             <Sparkles className="h-3.5 w-3.5" />
-            <span className="hidden sm:inline">Seek Rama&apos;s Blessing</span>
-            <span className="sm:hidden">Blessing</span>
+            <span className="hidden sm:inline">श्री राम का पावन आशीर्वाद</span>
+            <span className="sm:hidden">श्री राम आशीर्वाद</span>
           </button>
 
           {/* Mobile Menu Button with 44x44px Touch Target */}

@@ -36,7 +36,7 @@ export default function RamaBlessingSection({ onTriggerFlowerShower }: RamaBless
     if (e) e.preventDefault();
     setIsLoading(true);
 
-    const name = userName.trim() || "Devotee";
+    const name = userName.trim() || "प्रिय साधक";
 
     // Play sacred bell & om chime
     audioEngine.playTempleBell();
@@ -69,10 +69,10 @@ export default function RamaBlessingSection({ onTriggerFlowerShower }: RamaBless
           personalizedBlessing: data.personalizedBlessing,
           virtueToEmbody: data.virtueToEmbody || selectedIntent.virtueToEmbody,
           sacredAffirmation: data.sacredAffirmation || selectedIntent.sacredAffirmation,
-          timestamp: new Date().toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" }),
+          timestamp: new Date().toLocaleDateString("hi-IN", { month: "long", day: "numeric", year: "numeric" }),
         });
       } else {
-        // Fallback to rich scriptural wisdom
+        // Fallback to rich scriptural Hindi wisdom
         const fallbackText = selectedIntent.blessingTemplate(name);
         setBlessingResult({
           name,
@@ -82,7 +82,7 @@ export default function RamaBlessingSection({ onTriggerFlowerShower }: RamaBless
           personalizedBlessing: fallbackText,
           virtueToEmbody: selectedIntent.virtueToEmbody,
           sacredAffirmation: selectedIntent.sacredAffirmation,
-          timestamp: new Date().toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" }),
+          timestamp: new Date().toLocaleDateString("hi-IN", { month: "long", day: "numeric", year: "numeric" }),
         });
       }
     } catch {
@@ -96,7 +96,7 @@ export default function RamaBlessingSection({ onTriggerFlowerShower }: RamaBless
         personalizedBlessing: fallbackText,
         virtueToEmbody: selectedIntent.virtueToEmbody,
         sacredAffirmation: selectedIntent.sacredAffirmation,
-        timestamp: new Date().toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" }),
+        timestamp: new Date().toLocaleDateString("hi-IN", { month: "long", day: "numeric", year: "numeric" }),
       });
     } finally {
       setIsLoading(false);
@@ -105,7 +105,7 @@ export default function RamaBlessingSection({ onTriggerFlowerShower }: RamaBless
 
   const handleCopy = () => {
     if (!blessingResult) return;
-    const text = `LORD RAMA'S SACRED BLESSING for ${blessingResult.name}\n\n${blessingResult.sanskritShloka}\n(${blessingResult.transliteration})\n\nMeaning: ${blessingResult.shlokaMeaning}\n\nPersonalized Divine Blessing:\n"${blessingResult.personalizedBlessing}"\n\nVirtue to Embody: ${blessingResult.virtueToEmbody}\nDaily Affirmation: "${blessingResult.sacredAffirmation}"\n\n— Bestowed at the Ramayana Sanctuary (Curated by Hemant Shelkar)`;
+    const text = `॥ भगवान श्री राम का पावन दिव्य आशीर्वाद ॥\n\nसाधक: ${blessingResult.name}\nतिथि: ${blessingResult.timestamp}\n\n【 पावन संस्कृत श्लोक 】\n${blessingResult.sanskritShloka}\n(${blessingResult.transliteration})\n\n【 श्लोक का पावन भावार्थ 】\n${blessingResult.shlokaMeaning}\n\n【 प्रभु श्री राम का आत्मिक आशीर्वचन 】\n"${blessingResult.personalizedBlessing}"\n\n【 आज धारण करने योग्य सद्गुण 】\n${blessingResult.virtueToEmbody}\n\n【 दैनिक ध्यान संकल्प 】\n"${blessingResult.sacredAffirmation}"\n\n— रामायण दिव्य अनुभव (संकलन: हेमंत शेलकार / Hemant Shelkar)`;
     navigator.clipboard.writeText(text);
     setCopied(true);
     setTimeout(() => setCopied(false), 2500);
@@ -121,13 +121,13 @@ export default function RamaBlessingSection({ onTriggerFlowerShower }: RamaBless
         <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-14 px-2">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-300 text-[11px] sm:text-xs font-serif tracking-widest uppercase mb-3">
             <Sparkles className="h-3.5 w-3.5" />
-            <span>Divine Sanctuary</span>
+            <span>दिव्य आशीर्वाद कक्ष · Sacred Sanctuary</span>
           </div>
           <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold font-serif text-amber-100 tracking-tight">
-            Personalized Blessing from Lord Rama
+            भगवान श्री राम का व्यक्तिगत पावन आशीर्वाद
           </h2>
           <p className="mt-3 text-xs sm:text-base text-stone-300 font-sans leading-relaxed">
-            Enter your name and seek divine counsel for your current life chapter. Receive sacred Vedic shlokas, timeless fortitude, and Lord Rama&apos;s personal guidance to illuminate your conscience.
+            अपना शुभ नाम दर्ज करें और अपने वर्तमान जीवन-अध्याय के लिए प्रभु श्री राम से पावन मार्गदर्शन प्राप्त करें। पावन संस्कृत श्लोक और श्री राम का हिंदी आशीर्वचन आपके अंतर्मन को आलोकित करेंगे।
           </p>
         </div>
 
@@ -139,7 +139,7 @@ export default function RamaBlessingSection({ onTriggerFlowerShower }: RamaBless
               <div className="relative aspect-[4/5] sm:aspect-[3/4] max-h-[420px] sm:max-h-none w-full">
                 <Image
                   src="/images/lord_rama_portrait.jpg"
-                  alt="Lord Rama holding the divine Kodanda bow in Ayodhya"
+                  alt="भगवान श्री राम का दिव्य स्वरूप अयोध्या में कोदण्ड धनुष के साथ"
                   fill
                   className="object-cover object-top transition-transform duration-700 group-hover:scale-105"
                   referrerPolicy="no-referrer"
@@ -148,13 +148,13 @@ export default function RamaBlessingSection({ onTriggerFlowerShower }: RamaBless
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/25 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 text-stone-100">
                   <p className="text-[10px] sm:text-xs font-semibold uppercase tracking-widest text-amber-400 font-serif">
-                    Maryada Purushottama
+                    मर्यादा पुरुषोत्तम
                   </p>
                   <h3 className="text-xl sm:text-2xl font-bold font-serif text-amber-100">
-                    Sri Ramachandra
+                    भगवान श्री रामचन्द्र
                   </h3>
                   <p className="text-xs text-stone-300 mt-0.5 italic font-serif">
-                    &ldquo;He who offers refuge to all beings, dispelling every shadow of fear.&rdquo;
+                    &ldquo;अभयं सर्वभूतेभ्यो ददाम्येतद् व्रतं मम — जो भी मेरी शरण में आता है, उसे मैं सर्वथा निर्भय कर देता हूँ।&rdquo;
                   </p>
                 </div>
               </div>
@@ -164,24 +164,24 @@ export default function RamaBlessingSection({ onTriggerFlowerShower }: RamaBless
             <div className="rounded-xl border border-stone-800 bg-stone-900/60 p-4 sm:p-5 backdrop-blur-sm space-y-2.5 sm:space-y-3">
               <h4 className="text-xs sm:text-sm font-semibold uppercase tracking-wider text-amber-300 font-serif flex items-center gap-1.5">
                 <Shield className="h-4 w-4 text-amber-400" />
-                The Guiding Pillars of Rama
+                श्री राम के चार मार्गदर्शक स्तंभ
               </h4>
               <div className="grid grid-cols-2 gap-2 sm:gap-3 text-[11px] sm:text-xs text-stone-300">
                 <div className="p-2 sm:p-2.5 rounded-lg bg-stone-800/50 border border-stone-700/50">
-                  <strong className="block text-amber-200">Satya (Truth)</strong>
-                  Honoring truth above expedience.
+                  <strong className="block text-amber-200">सत्य (Satya)</strong>
+                  सत्य के सम्मुख कभी न झुकना।
                 </div>
                 <div className="p-2 sm:p-2.5 rounded-lg bg-stone-800/50 border border-stone-700/50">
-                  <strong className="block text-amber-200">Kshama (Grace)</strong>
-                  Forgiving even unyielding foes.
+                  <strong className="block text-amber-200">क्षमा (Kshama)</strong>
+                  शत्रु के प्रति भी उदार क्षमाभाव।
                 </div>
                 <div className="p-2 sm:p-2.5 rounded-lg bg-stone-800/50 border border-stone-700/50">
-                  <strong className="block text-amber-200">Abhaya (Fearless)</strong>
-                  Standing calm amidst tempests.
+                  <strong className="block text-amber-200">अभय (Abhaya)</strong>
+                  संकट में भी अटल आत्मबल।
                 </div>
                 <div className="p-2 sm:p-2.5 rounded-lg bg-stone-800/50 border border-stone-700/50">
-                  <strong className="block text-amber-200">Dharma (Duty)</strong>
-                  Living with unshakeable honor.
+                  <strong className="block text-amber-200">धर्म (Dharma)</strong>
+                  कर्तव्य-पालन को सर्वोपरि मानना।
                 </div>
               </div>
             </div>
@@ -197,10 +197,10 @@ export default function RamaBlessingSection({ onTriggerFlowerShower }: RamaBless
                   </div>
                   <div>
                     <h3 className="text-lg sm:text-xl font-bold font-serif text-amber-100">
-                      Invoke Your Sacred Blessing
+                      अपना पावन आशीर्वाद प्राप्त करें
                     </h3>
                     <p className="text-[11px] sm:text-xs text-stone-400">
-                      Prepared with warm wishes by Hemant Shelkar
+                      हेमंत शेलकार (Hemant Shelkar) की ओर से सप्रेम सादर भेंट
                     </p>
                   </div>
                 </div>
@@ -209,14 +209,14 @@ export default function RamaBlessingSection({ onTriggerFlowerShower }: RamaBless
                   {/* Name Input */}
                   <div>
                     <label htmlFor="seeker-name" className="block text-[11px] sm:text-xs font-medium uppercase tracking-wider text-amber-300/90 font-serif mb-1.5">
-                      Your Name / Seeker Identity
+                      आपका शुभ नाम / साधक का नाम
                     </label>
                     <input
                       id="seeker-name"
                       type="text"
                       value={userName}
                       onChange={(e) => setUserName(e.target.value)}
-                      placeholder="e.g. Arjun, Ananya, or your name"
+                      placeholder="जैसे: अर्जुन, अनन्या, या आपका नाम"
                       className="w-full min-h-[46px] rounded-xl border border-stone-700 bg-stone-950/80 px-4 py-2.5 text-stone-100 placeholder:text-stone-500 focus:border-amber-400 focus:outline-none focus:ring-1 focus:ring-amber-400 transition-all text-base sm:text-sm font-sans"
                     />
                   </div>
@@ -224,7 +224,7 @@ export default function RamaBlessingSection({ onTriggerFlowerShower }: RamaBless
                   {/* Life Intention Selector */}
                   <div>
                     <label className="block text-[11px] sm:text-xs font-medium uppercase tracking-wider text-amber-300/90 font-serif mb-2">
-                      Choose Your Life Prayer / Focus
+                      अपनी पावन प्रार्थना / जीवन-संकल्प चुनें
                     </label>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-2.5">
                       {BLESSING_INTENTIONS.map((intent) => {
@@ -253,14 +253,14 @@ export default function RamaBlessingSection({ onTriggerFlowerShower }: RamaBless
                   {/* Optional Custom Thought / Prayer */}
                   <div>
                     <label htmlFor="custom-prayer" className="block text-[11px] sm:text-xs font-medium uppercase tracking-wider text-amber-300/90 font-serif mb-1.5">
-                      Personal Prayer or Current Challenge (Optional)
+                      व्यक्तिगत प्रार्थना या वर्तमान चुनौती (वैकल्पिक)
                     </label>
                     <textarea
                       id="custom-prayer"
                       value={customPrayer}
                       onChange={(e) => setCustomPrayer(e.target.value)}
                       rows={2}
-                      placeholder="e.g., Seeking patience during career transition, or guidance for my family..."
+                      placeholder="जैसे: कार्यक्षेत्र में सफलता, मन की शांति, परिवार के कल्याण अथवा सन्मार्ग पर चलने का संबल..."
                       className="w-full rounded-xl border border-stone-700 bg-stone-950/80 px-4 py-2.5 text-stone-100 placeholder:text-stone-500 focus:border-amber-400 focus:outline-none focus:ring-1 focus:ring-amber-400 transition-all text-base sm:text-sm resize-none font-sans"
                     />
                   </div>
@@ -274,23 +274,23 @@ export default function RamaBlessingSection({ onTriggerFlowerShower }: RamaBless
                     {isLoading ? (
                       <>
                         <RefreshCw className="h-4 w-4 animate-spin text-stone-950" />
-                        <span>Invoking Divine Grace...</span>
+                        <span>दिव्य कृपा का आह्वान हो रहा है...</span>
                       </>
                     ) : (
                       <>
                         <Sparkles className="h-4 w-4 text-stone-950" />
-                        <span>Bestow Lord Rama&apos;s Blessing</span>
+                        <span>प्रभु श्री राम का पावन आशीर्वाद प्राप्त करें</span>
                       </>
                     )}
                   </button>
 
                   <p className="text-center text-[10px] sm:text-[11px] text-stone-500 font-sans">
-                    Accompanied by sacred temple bells & celestial flower shower.
+                    पवित्र मंदिर की घंटियों एवं दिव्य पुष्प वर्षा के साथ
                   </p>
                 </form>
               </div>
             ) : (
-              /* The Illuminated Divine Blessing Parchment */
+              /* The Illuminated Divine Blessing Parchment in Hindi & Sanskrit */
               <motion.div
                 initial={{ opacity: 0, scale: 0.96 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -306,56 +306,59 @@ export default function RamaBlessingSection({ onTriggerFlowerShower }: RamaBless
                 {/* Blessing Header */}
                 <div className="text-center mb-5 sm:mb-6">
                   <div className="inline-block px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-300 text-[10px] sm:text-xs font-serif tracking-widest uppercase mb-1.5">
-                    Divine Prasad & Ashirvaad
+                    प्रसाद एवं दिव्य आशीर्वचन
                   </div>
                   <h3 className="text-xl sm:text-3xl font-bold font-serif text-amber-200">
-                    Blessing for {blessingResult.name}
+                    प्रिय {blessingResult.name} के लिए श्री राम का पावन आशीर्वाद
                   </h3>
                   <p className="text-[11px] sm:text-xs text-stone-400 mt-1">
-                    Bestowed on {blessingResult.timestamp} · Under the Grace of Sri Rama
+                    {blessingResult.timestamp} को प्रदत्त · मर्यादा पुरुषोत्तम श्री राम की असीम अनुकंपा
                   </p>
                 </div>
 
                 {/* Sacred Sanskrit Shloka Box */}
                 <div className="rounded-xl border border-amber-500/30 bg-amber-950/25 p-3.5 sm:p-5 text-center my-4 sm:my-5 backdrop-blur-sm relative">
+                  <span className="text-[10px] uppercase tracking-wider text-amber-400/80 font-serif block mb-1">
+                    ॥ पावन संस्कृत श्लोक ॥
+                  </span>
                   <p className="text-sm sm:text-lg font-serif text-amber-300 font-medium whitespace-pre-line leading-relaxed break-words">
                     {blessingResult.sanskritShloka}
                   </p>
                   <p className="text-[11px] sm:text-xs text-amber-200/80 italic font-serif mt-1.5 break-words">
                     {blessingResult.transliteration}
                   </p>
-                  <div className="my-2 h-px w-20 sm:w-24 mx-auto bg-amber-500/30" />
-                  <p className="text-xs text-stone-300 font-sans leading-relaxed">
-                    <strong className="text-amber-200">Meaning:</strong> {blessingResult.shlokaMeaning}
+                  <div className="my-2.5 h-px w-20 sm:w-24 mx-auto bg-amber-500/30" />
+                  <p className="text-xs sm:text-sm text-stone-200 font-sans leading-relaxed">
+                    <strong className="text-amber-200">श्लोक का भावार्थ:</strong> {blessingResult.shlokaMeaning}
                   </p>
                 </div>
 
-                {/* Personalized Lord Rama Divine Voice */}
+                {/* Personalized Lord Rama Divine Voice in Hindi */}
                 <div className="my-4 sm:my-5 space-y-2.5 font-serif">
-                  <div className="flex items-center gap-2 text-[11px] sm:text-xs uppercase tracking-wider text-amber-400/90 font-sans font-semibold">
+                  <div className="flex items-center gap-2 text-[11px] sm:text-xs uppercase tracking-wider text-amber-400 font-sans font-semibold">
                     <Flame className="h-3.5 w-3.5 text-amber-400 shrink-0" />
-                    <span>The Voice of Rama to Your Soul</span>
+                    <span>प्रभु श्री राम का आत्मिक आशीर्वचन</span>
                   </div>
-                  <p className="text-sm sm:text-lg text-stone-200 leading-relaxed italic border-l-2 border-amber-500/60 pl-3.5 sm:pl-4 py-1">
+                  <p className="text-sm sm:text-lg text-amber-100/95 leading-relaxed italic border-l-2 border-amber-500/60 pl-3.5 sm:pl-4 py-1 font-serif">
                     &ldquo;{blessingResult.personalizedBlessing}&rdquo;
                   </p>
                 </div>
 
-                {/* Virtue & Daily Affirmation Grid */}
+                {/* Virtue & Daily Affirmation Grid in Hindi */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3 my-4 sm:my-6 text-xs">
                   <div className="rounded-xl bg-stone-900/80 border border-amber-500/20 p-3 sm:p-3.5">
                     <span className="text-[10px] sm:text-[11px] uppercase tracking-wider text-amber-400 font-semibold block mb-1">
-                      Virtue to Embody
+                      आज धारण करने योग्य सद्गुण
                     </span>
-                    <span className="text-stone-200 font-medium text-xs sm:text-sm">
+                    <span className="text-stone-100 font-medium text-xs sm:text-sm">
                       {blessingResult.virtueToEmbody}
                     </span>
                   </div>
                   <div className="rounded-xl bg-stone-900/80 border border-amber-500/20 p-3 sm:p-3.5">
                     <span className="text-[10px] sm:text-[11px] uppercase tracking-wider text-amber-400 font-semibold block mb-1">
-                      Daily Affirmation
+                      दैनिक ध्यान संकल्प
                     </span>
-                    <span className="text-stone-200 font-medium italic text-xs sm:text-sm">
+                    <span className="text-stone-100 font-medium italic text-xs sm:text-sm">
                       &ldquo;{blessingResult.sacredAffirmation}&rdquo;
                     </span>
                   </div>
@@ -369,7 +372,7 @@ export default function RamaBlessingSection({ onTriggerFlowerShower }: RamaBless
                       className="flex-1 sm:flex-initial inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 min-h-[44px] rounded-xl bg-stone-800 text-stone-200 hover:bg-stone-700 hover:text-amber-300 active:scale-95 transition-all cursor-pointer"
                     >
                       {copied ? <Check className="h-4 w-4 text-emerald-400" /> : <Copy className="h-4 w-4" />}
-                      <span>{copied ? "Blessing Copied!" : "Copy Blessing"}</span>
+                      <span>{copied ? "आशीर्वाद कॉपी हुआ!" : "आशीर्वाद कॉपी करें"}</span>
                     </button>
 
                     <button
@@ -380,7 +383,7 @@ export default function RamaBlessingSection({ onTriggerFlowerShower }: RamaBless
                       className="flex-1 sm:flex-initial inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 min-h-[44px] rounded-xl bg-amber-500/15 border border-amber-500/30 text-amber-200 hover:bg-amber-500/25 active:scale-95 transition-all cursor-pointer"
                     >
                       <Sparkles className="h-4 w-4 text-amber-400" />
-                      <span>Flower Shower</span>
+                      <span>पुष्प वर्षा</span>
                     </button>
                   </div>
 
@@ -389,7 +392,7 @@ export default function RamaBlessingSection({ onTriggerFlowerShower }: RamaBless
                     className="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 min-h-[44px] rounded-xl border border-stone-800 text-stone-400 hover:text-stone-200 active:scale-95 transition-all cursor-pointer"
                   >
                     <RefreshCw className="h-3.5 w-3.5" />
-                    <span>Seek Another Blessing</span>
+                    <span>पुनः नया आशीर्वाद प्राप्त करें</span>
                   </button>
                 </div>
               </motion.div>

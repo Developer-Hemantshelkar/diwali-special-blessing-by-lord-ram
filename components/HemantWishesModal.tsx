@@ -101,7 +101,7 @@ export default function HemantWishesModal({
                 }}
                 className="w-full flex-1 inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 px-5 py-3.5 min-h-[48px] text-xs sm:text-sm font-semibold font-serif text-stone-950 shadow-lg shadow-amber-500/20 hover:from-amber-400 hover:to-amber-500 active:scale-[0.98] transition-all cursor-pointer"
               >
-                <span>Receive Lord Rama&apos;s Blessing</span>
+                <span>श्री राम का पावन आशीर्वाद प्राप्त करें</span>
                 <ArrowRight className="h-4 w-4" />
               </button>
 
